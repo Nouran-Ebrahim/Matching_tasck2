@@ -20,41 +20,41 @@ $(document).ready(function () {
 
 });
 /****************end loading page***********************/
-$(window).on("load",function(){
-    window.addEventListener("resize", function (event) {
-        var browserWidth = window.innerWidth;
-        var browserHieght = window.innerHeight;
-        var matcherDiv = document.querySelector(".matcher");
-        var scale = browserWidth / 1000; // Calculate the scale factor
-        // var scaley = browserHieght/ 800; // Calculate the scale factor
-        if (browserWidth <= 1000) {
-          matcherDiv.style.transform = "scale(" + scale + ")";
-        //   matcherDiv.css("magin-top","0")
-        //   matcherDiv.style.transform = "scaleY(" + scaley + ")";
-        } else {
-          matcherDiv.style.transform = "none";
-        //   matcherDiv.style.transform = "none";
-        }
-      });
-})
+// $(window).on("load",function(){
+//     window.addEventListener("resize", function (event) {
+//         var browserWidth = window.innerWidth;
+//         var browserHieght = window.innerHeight;
+//         var matcherDiv = document.querySelector(".matcher");
+//         var scale = browserWidth / 1000; // Calculate the scale factor
+//         // var scaley = browserHieght/ 800; // Calculate the scale factor
+//         if (browserWidth <= 1000) {
+//           matcherDiv.style.transform = "scale(" + scale + ")";
+//         //   matcherDiv.css("magin-top","0")
+//         //   matcherDiv.style.transform = "scaleY(" + scaley + ")";
+//         } else {
+//           matcherDiv.style.transform = "none";
+//         //   matcherDiv.style.transform = "none";
+//         }
+//       });
+// })
 
 /***************start scale functionality***************/
 
-// window.addEventListener("resize", function (event) {
-//     var browserWidth = window.innerWidth;
-//     var browserHieght = window.innerHeight;
-//     var matcherDiv = document.querySelector(".matcher");
-//     var scale = browserWidth / 1000; // Calculate the scale factor
-//     // var scaley = browserHieght/ 800; // Calculate the scale factor
-//     if (browserWidth <= 1000) {
-//       matcherDiv.style.transform = "scale(" + scale + ")";
-//     //   matcherDiv.css("magin-top","0")
-//     //   matcherDiv.style.transform = "scaleY(" + scaley + ")";
-//     } else {
-//       matcherDiv.style.transform = "none";
-//     //   matcherDiv.style.transform = "none";
-//     }
-//   });
+window.addEventListener("resize", function (event) {
+    var browserWidth = window.innerWidth;
+    var browserHieght = window.innerHeight;
+    var matcherDiv = document.querySelector(".matcher");
+    var scale = browserWidth / 1000; // Calculate the scale factor
+    // var scaley = browserHieght/ 800; // Calculate the scale factor
+    if (browserWidth <= 1000) {
+      matcherDiv.style.transform = "scale(" + scale + ")";
+    //   matcherDiv.css("magin-top","0")
+    //   matcherDiv.style.transform = "scaleY(" + scaley + ")";
+    } else {
+      matcherDiv.style.transform = "none";
+    //   matcherDiv.style.transform = "none";
+    }
+  });
 
 /***************end scale functionality***************/
 
