@@ -61,19 +61,19 @@ window.addEventListener("resize", function (event) {
 /***************start show dummy and help buttom functionality***************/
 $('#show-dummy-btn').click(() => {
     $('.dummy-img').css('display', 'block')
-    $('.outer').addClass("img-opacity")
+    // $('.outer').addClass("img-opacity")
 })
 
 $('#close-btn').click(() => {
     $('.dummy-img').css('display', 'none')
-    $('.outer').removeClass("img-opacity")
+    // $('.outer').removeClass("img-opacity")
 })
 $('#close-btn2').click(() => {
     $('.help').css('display', 'none')
-    $('.outer').removeClass("img-opacity")
+    // $('.outer').removeClass("img-opacity")
 })
 $('#help-btn').click(() => {
-    $('.outer').addClass("img-opacity")
+    // $('.outer').addClass("img-opacity")
     $('.help').css('display', 'block')
 })
 /***************end show dummy and help buttom functionality***************/
