@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+      content="width=device-width,initial-scale=1.0,user-scalable=yes">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&family=Comic+Neue&display=swap"
+      rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!--  start loading page  -->
+    <div class="loader-cover">
+      <div class="loader">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="outer">
+      <!-- start aduio section-->
+      <audio id="audio" src="correct-choice-43861.mp3"></audio>
+      <audio id="audio-wrong" src="buzzer-or-wrong-answer-20582.mp3"></audio>
+      <!-- end aduio section-->
+      <div class="matcher">
+        <header class="mb-4 d-flex ">
+          <div>Look and Match</div>
+          <div id="show-dummy-btn" class="header-icon">
+            <img src="imgs/resourse_icon.png" alt="">
+          </div>
+          <div id="help-btn" class="header-icon">
+            <img src="imgs/help_icon.png" alt="">
+          </div>
+        </header>
+
+        <div class="bg-blue">
+          <!--  start dummy section -->
+          <div  class=" dummy-img">
+
+            <div class="content">
+              <img src="imgs/dummy.jpg" class="dummy " alt="">
+            </div>
+            <div id="close-btn" class="close">
+              <img src="imgs/close_icon.png"  alt="">
+            </div>
+          </div>
+          <div  class=" help">
+
+            <div class="content-help">
+              <p>Help content goes here</p>
+            </div>
+            <div id="close-btn2" class="close">
+              <img src="imgs/close_icon.png"  alt="">
+            </div>
+          </div>
+          <!--  end dummy section -->
+          <div class="bg-white">
+            <div class="pics mt-5">
+              <div class="q" data-id="1">
+                <img
+                  src="imgs/img1.png"
+                  alt=""
+                  />
+                <div class="radio-circle"></div>
+              </div>
+              <div class="q" data-id="2">
+                <img
+                  src="imgs/img2.png"
+                  alt=""
+                  />
+                <div class="radio-circle"></div>
+              </div>
+              <div class="q" data-id="3">
+                <img
+                  src="imgs/img3.png"
+                  alt=""
+                  />
+                <div class="radio-circle"></div>
+              </div>
+              <div class="q" data-id="4">
+                <img
+                  src="imgs/img4.png"
+                  alt=""
+                  />
+                <div class="radio-circle"></div>
+              </div>
+            </div>
+            <div class="lines">
+              <div class="container2 ">
+                <svg height="165" width="100%">
+                  <polyline
+                    class="line "
+                    id="line1"
+                    points="74, 3, 300, 160">
+                  </polyline>
+                  <polyline
+                    class="line "
+                    id="line2"
+                    points="195, 3, 426, 160">
+                  </polyline>
+                  <polyline
+                    class="line "
+                    id="line3"
+                    points="300, 3, 74, 160">
+                  </polyline>
+                  <polyline
+                    class="line "
+                    id="line4"
+                    points="426, 3, 200, 160">
+                  </polyline>
+                </svg>
+              </div>
+            </div>
+            <div class="answers mb-3">
+              <div class="ans unclicked" data-ans-id="3">
+                <div class="wrong-icon ">
+                  <img src="imgs/wrong icon.png">
+                </div>
+                <div class="txt">Chair</div>
+                <div class="radio-circle movup"></div>
+              </div>
+              <div class="ans unclicked" data-ans-id="4">
+                <div class="wrong-icon ">
+                  <img src="imgs/wrong icon.png">
+                </div>
+                <div class="txt">Window</div>
+                <div class="radio-circle movup"></div>
+              </div>
+              <div class="ans unclicked" data-ans-id="1">
+                <div class="wrong-icon ">
+                  <img src="imgs/wrong icon.png">
+                </div>
+                <div class="txt">Scissors</div>
+                <div class="radio-circle movup"></div>
+              </div>
+              <div class="ans unclicked" data-ans-id="2">
+                <div class="wrong-icon ">
+                  <img src="imgs/wrong icon.png">
+                </div>
+                <div class="txt">Board</div>
+                <div class="radio-circle movup"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="d-flex">
+          <div class="footer-icon">
+            <img src="imgs/reset_icon.png" class="reset" alt="">
+          </div>
+          <div class="footer-icon">
+            <img src="imgs/show_icon.png" class="show" alt="">
+          </div>
+        </footer>
+
+      </div>
+    </div>
+
+
+
+    <!--  start scripting section -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/javascript.js"></script>
+    <!--  end scripting section -->
+  </body>
+
+</html>

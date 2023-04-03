@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="https://d3js.org/d3.v4.min.js">
+        </script>
+        <style>
+        /* .canvas {
+  border: 1px solid black;
+} */
+#box1{
+width: 50px;
+height: 50px;
+position: absolute;
+top: 100px;
+left:40px;
+background-color: red;
+}
+#box2{
+    width: 50px;
+height: 50px;
+position: absolute;
+top: 200px;
+left:100px;
+background-color: green; 
+}
+    </style>
+    </head>
+    <body>
+        <!-- <canvas class="canvas" id="canvas1"></canvas>
+        <canvas class="canvas" id="canvas2"></canvas>
+        <canvas class="canvas" id="canvas3"></canvas>
+        <canvas class="canvas" id="canvas4"></canvas>
+        <script>
+const canvas1 = document.getElementById("canvas1");
+const canvas2 = document.getElementById("canvas2");
+const canvas3 = document.getElementById("canvas3");
+const canvas4 = document.getElementById("canvas4");
+const ctx1 = canvas1.getContext("2d");
+const ctx2 = canvas2.getContext("2d");
+const ctx3 = canvas3.getContext("2d");
+const ctx4 = canvas4.getContext("2d");
+// let prevX, prevY;
+// let startX, startY;
+// Set the line color and width
+ctx1.strokeStyle = "red";
+ctx1.lineWidth = 2;
+ctx2.strokeStyle = "red";
+ctx2.lineWidth = 2;
+ctx3.strokeStyle = "red";
+ctx3.lineWidth = 2;
+ctx4.strokeStyle = "red";
+ctx4.lineWidth = 2;
+// Listen for mousemove events
+
+let prevX1, prevY1;
+let prevX2, prevY2;
+let prevX3, prevY3;
+let prevX4, prevY4;
+// Set the line color and width
+
+
+// Listen for mousemove events
+// canvas.addEventListener("mousemove", function(event) {
+//   // Get the current mouse position
+//   const currX = event.clientX - canvas.offsetLeft;
+//   const currY = event.clientY - canvas.offsetTop;
+
+//   // Draw the line from the previous mouse position to the current mouse position
+//   if (prevX != null && prevY != null) {
+//     ctx.beginPath();
+//     ctx.moveTo(prevX, prevY);
+//     ctx.lineTo(currX, currY);
+//     ctx.stroke();
+//   }
+
+//   // Save the current mouse position for the next mousemove event
+//   prevX = currX;
+//   prevY = currY;
+// });
+
+canvas1.addEventListener("mousedown", function(event) {
+  // Get the current mouse position
+  const currX1 = event.clientX - canvas1.offsetLeft;
+  const currY1 = event.clientY - canvas1.offsetTop;
+
+  // Draw the line from the previous mouse position to the current mouse position
+  if (prevX1 != null && prevY1 != null) {
+    ctx1.beginPath();
+    ctx1.moveTo(prevX1, prevY1);
+    ctx1.lineTo(currX1, currY1);
+    ctx1.stroke();
+  }
+
+  // Save the current mouse position for the next mousemove event
+  prevX1 = currX1;
+  prevY1 = currY1;
+
+});
+canvas2.addEventListener("mousedown", function(event) {
+ 
+  // Get the current mouse position
+  const currX2 = event.clientX - canvas2.offsetLeft;
+  const currY2 = event.clientY - canvas2.offsetTop;
+
+  // Draw the line from the previous mouse position to the current mouse position
+  if (prevX2 != null && prevY2 != null) {
+    ctx2.beginPath();
+    ctx2.moveTo(prevX2, prevY2);
+    ctx2.lineTo(currX2, currY2);
+    ctx2.stroke();
+  }
+
+  // Save the current mouse position for the next mousemove event
+  prevX2 = currX2;
+  prevY2 = currY2;
+
+});
+// canvas3.addEventListener("mousedown", function(event) {
+//   // Get the current mouse position
+//   startX = event.clientX - canvas3.offsetLeft;
+//   startY = event.clientY - canvas3.offsetTop;
+
+// get(startX,startY)
+
+// });
+// canvas4.addEventListener("mousedown", function(event) {
+//   // Get the current mouse position
+//   startX = event.clientX - canvas4.offsetLeft;
+//   startY = event.clientY - canvas4.offsetTop;
+
+// get(startX,startY)
+
+// });
+// function get(startX,startY){
+//   console.log(startX)
+//   console.log(startY)
+//   if (startX != null && startY != null) {
+//     // Get the current mouse position
+//     console.log("vvv")
+//     canvas1.addEventListener("mousedown", function(event) {
+//         console.log("cc")
+//     var currX = event.clientX - canvas1.offsetLeft;
+//     var currY = event.clientY - canvas1.offsetTop;
+//     console.log(startX)
+//     ctx1.clearRect(0, 0, canvas1.width, canvas1.height);
+//     ctx1.beginPath();
+//     ctx1.moveTo(startX, startY);
+//     ctx1.lineTo(currX, currY);
+//     ctx1.stroke();
+//     })
+//     canvas2.addEventListener("mousedown", function(event) {
+//         console.log("cc")
+//     var currX = event.clientX - canvas2.offsetLeft;
+//     var currY = event.clientY - canvas2.offsetTop;
+//     console.log(startX)
+//     ctx2.clearRect(0, 0, canvas2.width, canvas2.height);
+//     ctx2.beginPath();
+//     ctx2.moveTo(startX, startY);
+//     ctx2.lineTo(currX, currY);
+//     ctx2.stroke();
+//     })
+
+// }
+
+// }
+//console.log(startX)
+
+//Listen for mouseup events
+// canvas.addEventListener("mouseup", function(event) {
+//   // Clear the starting mouse position
+  
+// });
+//   const svg = d3.select('#svg');
+//   let drawing = false;
+//   let previous_coords = null;
+
+//   function draw_point(previous_coords) {
+//     if (!drawing)
+//       return;
+
+//     const coords = d3.mouse(this);
+
+//     svg.append('circle')
+//       .attr('cx', coords[0])
+//       .attr('cy', coords[1])
+//       .attr('r', 5)
+//       .style('fill', 'black');
+
+//     // this block doesn't work
+//     // svg.append('line')
+//     //   .attr('x1', previous_coords[0])
+//     //   .attr('y1', previous_coords[1])
+//     //   .attr('x2', coords[0])
+//     //   .attr('y2', coords[1])
+//     //   .style('stroke', rgb(255, 0, 0))
+//     //   .style('stroke-width', 10);
+//     ctx.beginPath();
+//     ctx.moveTo(prevX, prevY);
+//     ctx.lineTo(currX, currY);
+//     ctx.stroke();
+
+//     previous_coords = d3.mouse(this);
+//   };
+
+//   svg.on('mousedown', () => {
+//     drawing = true;
+//   });
+
+//   svg.on('mouseup', () => {
+//     drawing = false;
+//   });
+
+//   svg.on('mousemove', draw_point);
+// const canvas = document.getElementById("canvas");
+// const ctx = canvas.getContext("2d");
+// let startX, startY;
+
+// // Set the line color and width
+// ctx.strokeStyle = "red";
+// ctx.lineWidth = 2;
+
+// // Listen for mousedown events
+// canvas.addEventListener("click", function(event) {
+//   // Get the starting mouse position
+//   startX = event.clientX - canvas.offsetLeft;
+//   startY = event.clientY - canvas.offsetTop;
+  
+// });
+
+// // Listen for mousemove events
+// canvas.addEventListener("mousemove", function(event) {
+//   // Only draw the line if the mouse button is down
+//   if (startX != null && startY != null) {
+//     // Get the current mouse position
+//     const currX = event.clientX - canvas.offsetLeft;
+//     const currY = event.clientY - canvas.offsetTop;
+
+//     // Draw the line from the starting mouse position to the current mouse position
+//     // ctx.clearRect(0, 0, canvas.width, canvas.height);
+//     ctx.beginPath();
+//     ctx.moveTo(startX, startY);
+//     ctx.lineTo(currX, currY);
+//     ctx.stroke();
+//   }
+// });
+
+// // Listen for mouseup events
+// canvas.addEventListener("mouseup", function(event) {
+//   // Clear the starting mouse position
+//   startX = null;
+//   startY = null;
+// });
+
+      </script> -->
+
+      <!-- <svg id="svg" style="width:100%; height:800px" ></svg> -->
+<div id="box1"></div>
+<div id="box2"></div>
+<svg style="background-color: blue;" width="100%" height="50%">
+    <line id="diagonal-line" x1="0" y1="0" x2="0" y2="0" stroke="black" stroke-width="2" />
+  </svg>
+      <script>
+        let el1=document.getElementById("box1")
+        let el2=document.getElementById("box2")
+        let el1coor=el1.getBoundingClientRect()
+        console.log("el1coor",el1coor)
+        let el2coor=el2.getBoundingClientRect()
+        console.log("el2coor",el2coor)
+        var x11=el1coor.x
+        var y11=el1coor.y
+        var x21=el2coor.x
+        var y21=el2coor.y
+        const diagonalLine = document.getElementById('diagonal-line');
+  diagonalLine.setAttribute('x1', x11);
+  diagonalLine.setAttribute('y1', y11);
+  diagonalLine.setAttribute('x2', x21);
+  diagonalLine.setAttribute('y2', y21);
+        // const svg = d3.select('#svg');
+        // console.log(svg)
+//         document.addEventListener("click", function(event) {
+//   var x = event.clientX;
+//   var y = event.clientY;
+//   console.log("Clicked at coordinates: " + x + ", " + y);
+// });
+// let previous_coords = null;
+// function draw_point(previous_coords) {
+//     // if (!drawing)
+//     //   return;
+
+//     const coords = d3.mouse(this);
+//    console.log(coords)
+   
+//     svg.append('circle')
+//       .attr('cx', coords[0])
+//       .attr('cy', coords[1])
+//       .attr('r', 5)
+//       .style('fill', 'black');
+//        [743, 216]
+//       [869, 363]
+//     // // this block doesn't work
+//     svg.append('line')
+//       .setAttribute('x1', 743)
+//       .setAttribute('y1', 216)
+//       .setAttribute('x2', 869)
+//       .setAttribute('y2', 363)
+//       .style('stroke', rgb(255, 0, 0))
+//       .style('stroke-width', 10);
+
+//     previous_coords = d3.mouse(this);
+//   };
+// svg.on('click', draw_point);
+      </script>
+    </body>
+</html>
