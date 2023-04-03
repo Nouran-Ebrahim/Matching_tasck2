@@ -13,10 +13,11 @@ window.addEventListener("resize", function (event) {
     var browserWidth = window.innerWidth;
     var browserHieght = window.innerHeight;
     var matcherDiv = document.querySelector(".matcher");
-    var scale = browserWidth / 700; // Calculate the scale factor
+    var scale = browserWidth / 1000; // Calculate the scale factor
     // var scaley = browserHieght/ 800; // Calculate the scale factor
-    if (browserWidth <= 700) {
+    if (browserWidth <= 1000) {
       matcherDiv.style.transform = "scale(" + scale + ")";
+    //   matcherDiv.css("magin-top","0")
     //   matcherDiv.style.transform = "scaleY(" + scaley + ")";
     } else {
       matcherDiv.style.transform = "none";
@@ -77,20 +78,25 @@ $('.ans').click(function () {
                 console.log("good")
                 $(quest).addClass("img-opacity")
                 $(quest).addClass("unclicked")
+                $(this).addClass("unclicked")
                 $(quest).find(".radio-circle").addClass("white-radio")
                 if (data1 == 1) {
-
+                    
+                    // $(this).addClass("unclicked")
                     $('#line1').css("display","inline")
                 }
                 if (data1 == 2) {
                     $('#line2').css("display","inline")
+                    
                 }
                 if (data1 == 3) {
                     $('#line3').css("display","inline")
+                    
 
                 }
                 if (data1 == 4) {
                     $('#line4').css("display","inline")
+                    
 
                 }
 
@@ -102,7 +108,7 @@ $('.ans').click(function () {
         myAudio.play()
         console.log("good boy")
         $(this).find(".wrong-icon").css("visibility","hidden")
-       
+    //    $(this).addClass("unclicked")
         temp = ""
     }
     else {
@@ -131,6 +137,8 @@ $('.reset').click(function () {
     $(".q").removeClass("img-opacity")
 
     $(".q").addClass("clicked")
+    $(".ans").addClass("unclicked")
+    $(".ans").removeClass("clicked")
     $('#line1').css("display","none")
     $('#line2').css("display","none")
     $('#line3').css("display","none")
@@ -144,6 +152,9 @@ $('.show').click(function () {
     $(".q").addClass("img-opacity")
     $(".ans").addClass("img-opacity")
     $(".q").addClass("unclicked")
+    $(".q").removeClass("clicked")
+    $(".ans").addClass("unclicked")
+    $(".ans").removeClass("clicked")
     $(".ans").find(".radio-circle").removeClass("blue-radio")
     $(".q").find(".radio-circle").removeClass("blue-radio")
     $(".ans").find(".radio-circle").addClass("white-radio")
