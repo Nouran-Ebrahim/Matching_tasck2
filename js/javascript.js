@@ -13,11 +13,11 @@ window.addEventListener("resize", function (event) {
     var browserWidth = window.innerWidth;
     var browserHieght = window.innerHeight;
     var matcherDiv = document.querySelector(".matcher");
-    var scale = browserWidth / 600; // Calculate the scale factor
-    // var scaley = browserHieght/ 700; // Calculate the scale factor
-    if (browserWidth <= 600) {
+    var scale = browserWidth / 700; // Calculate the scale factor
+    // var scaley = browserHieght/ 800; // Calculate the scale factor
+    if (browserWidth <= 700) {
       matcherDiv.style.transform = "scale(" + scale + ")";
-    //   matcherDiv.style.transform = "scale(" + scaley + ")";
+    //   matcherDiv.style.transform = "scaleY(" + scaley + ")";
     } else {
       matcherDiv.style.transform = "none";
     //   matcherDiv.style.transform = "none";
