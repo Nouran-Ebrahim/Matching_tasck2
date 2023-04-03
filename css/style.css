@@ -117,23 +117,35 @@ body {
 .outer {
   display: flex;
   justify-content: center;
-  /* background-color: aqua; */
+  background-color: aqua;
   /* flex-direction: column;
   align-items: center; */
+
 }
+
 .matcher {
   width: 900px;
+  animation-name: zoom;
+  animation-duration: 0.9s;
   /* height: 611px; */
   /* border: 4px solid #f5821f;
   border-radius: 20px; */
   /* position: absolute;
   left: 15px; */
-  /* background-color: bisque; */
+  transform-origin: top left;
+  background-color: bisque;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+}
+@keyframes zoom {
+  from {
+    scale: 1.5;
+  }
+  to {
+    scale: 1;
+  }
 }
 .pics,
 .answers {
